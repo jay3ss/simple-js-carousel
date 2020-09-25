@@ -6,7 +6,6 @@ const thumbnailEventListener = (event) => {
     if (mainImage.src !== event.target.src) {
         mainImage.src = event.target.src;
         mainImage.alt = event.target.alt;
-        console.log('Main image updated!');
     }
 }
 
@@ -19,7 +18,6 @@ const thumbnailEventListener = (event) => {
 
         if (child.className === 'thumbnail-image') {
             child.addEventListener('click', thumbnailEventListener);
-            console.log('Added event listener to thumbnail image');
         }
     }
 })();
